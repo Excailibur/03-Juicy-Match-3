@@ -5,16 +5,16 @@ Exercise for MSCH-C220
 
 A matched 3 game. Created in Godot.
 
-Implementation
+# Implementation
 Created using Godot 3.4.2
 
 Assets are provided by Kenney.nl, provided under a CC0 1.0 Public Domain License.
 
-References
+# References
 None
 
-Future Development
+# Future Development
 None
 
-Created by
+# Created by
 Edison Li
