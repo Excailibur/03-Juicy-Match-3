@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Grid/grid.gd" type="Script" id=1]
+[ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=3]
+[ext_resource path="res://Assets/coin_small.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Jellee-Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/background_game.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 576, 1024 )
+
+[node name="grid" type="Node2D" parent="."]
+script = ExtResource( 1 )
+width = 7
+height = 10
+xStart = 82
+yStart = 832
+offset = 69
+background = ExtResource( 2 )
+
+[node name="Effects" type="Node2D" parent="."]
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HUD"]
+margin_right = 576.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="Coin" type="Sprite" parent="HUD"]
+position = Vector2( 20, 20 )
+texture = ExtResource( 4 )
+
+[node name="Score" type="Label" parent="HUD"]
+margin_left = 40.0
+margin_right = 566.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
